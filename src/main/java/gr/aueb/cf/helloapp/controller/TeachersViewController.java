@@ -31,7 +31,7 @@ public class TeachersViewController extends HttpServlet {
         String message = "";
 
         String filterId = req.getParameter("id");
-        Long longFilterId = (filterId != null && filterId.isEmpty()) ? Long.parseLong(filterId) : null;
+        Long longFilterId = (filterId != null && !filterId.isEmpty()) ? Long.parseLong(filterId) : null;
         String filterFirstname = req.getParameter("firstname");
         String filterLastname = req.getParameter("lastname");
 
